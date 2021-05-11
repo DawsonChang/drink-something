@@ -28,6 +28,13 @@ child component。
     "lodash": "^4.17.21",
     以上是為了使用 cloneDeep(Object) 這個函數，目的是 deep copy Object
 
+    另外引入新的字型，在 App.vue 的 style 部分
+```
+
+## 部署
+```
+此 project 部署至 Github Pages:
+[https://dawsonchang.github.io/drink-something/](https://dawsonchang.github.io/drink-something/)
 ```
 
 ## Project setup
