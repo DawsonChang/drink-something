@@ -2,7 +2,9 @@
 
 ## 架構
 ```
-此 project 最主要的部分是 App.vue，部分會跨 component 的變數及函式都定義在此。所有 component 都是透過 callback function 來改變主要變數（變數定義在 App.vue），這些 callback function 當作 props 傳入 child component。
+此 project 最主要的部分是 App.vue，部分會跨 component 的變數及函式都定義在此。所有 component 都是透過
+callback function 來改變主要變數（變數定義在 App.vue），這些 callback function 當作 props 傳入
+child component。
 
 其中靜態資料定義在 data/orders.json
 
