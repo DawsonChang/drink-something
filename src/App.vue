@@ -130,10 +130,12 @@ export default {
     left: 50%;
     transform: translate(-50%, 0);
     margin: 30px 0;
+    padding-bottom: 50px; 
 }
 
 .list {
     margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 @media only screen and (max-width: 600px) {

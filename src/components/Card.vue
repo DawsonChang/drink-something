@@ -97,13 +97,13 @@ export default {
 
 .pencil-icon:hover,
 .pencil-icon:focus {
-  opacity: 50%;
+  color: #ddeaf0;
   text-decoration: none;
   cursor: pointer;
 }
 .trash-icon:hover,
 .trash-icon:focus {
-  opacity: 50%;
+  color: #ddeaf0;
   text-decoration: none;
   cursor: pointer;
 }
