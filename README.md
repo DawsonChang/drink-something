@@ -6,9 +6,9 @@
 callback function 來改變主要變數（變數定義在 App.vue），這些 callback function 當作 props 傳入
 child component。
 
-其中靜態資料定義在 data/orders.json
+其中靜態資料定義在 src/data/orders.json
 
-各個 components 介紹:
+各個 component 介紹 (src/components):
     Card.vue - 單一 order 的排版和 style
     List.vue - 用 v-for 將所有 order 用 Card component 顯示出來
     Modal.vue - 顯示一個獨立視窗，用來新增、編輯、刪除
