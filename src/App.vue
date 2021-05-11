@@ -136,4 +136,10 @@ export default {
     margin-top: 30px;
 }
 
+@media only screen and (max-width: 600px) {
+    .app {
+        width: 80%;
+    }
+}
+
 </style>

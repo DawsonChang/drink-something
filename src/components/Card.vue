@@ -1,5 +1,5 @@
 <template>
-  <div class='card'>
+  <div class='card' :style='firstStyle'>
     <div class='grid-item name'><div>{{ order.name }}</div></div>
     <div class='grid-item price'><div>${{ order.price }}</div></div>
     <div class='grid-item notes'><div>{{ order.notes }}</div></div>
@@ -21,9 +21,15 @@ export default {
     name: 'Card',
     props: {
         order: Object,
-        handleOpenModal: Function
+        handleOpenModal: Function,
+        firstOrderId: Number
+    },
+    computed: {
+        // 如果不是第一個元素，則隱藏 border-top
+        firstStyle() {
+            return this.order.id !== this.firstOrderId ? 'border-top: none' : ''
+        }
     }
-
 }
 </script>
 
@@ -35,10 +41,9 @@ export default {
     grid-template-rows: auto;
     grid-template-areas: "name name name name price edit"
                          "notes notes notes notes notes delete"; 
-    border: 0.5px solid #becacf;
+    border: 0.5px solid #ddeaf0;
     border-right: none;
     border-left: none;
-    // border-radius: 5px;
     font-family: 'Noto Sans TC', sans-serif;
 }
 
@@ -74,7 +79,7 @@ export default {
   }
 }
 .edit {
-    background-color: #ebce7e;
+    background-color: #ecd595;
     grid-area: edit;
     div {
       justify-content: center;
@@ -82,7 +87,7 @@ export default {
     }
 }
 .delete {
-    background-color: #b3979f;
+    background-color: #e4b534;
     grid-area: delete;
     div {
       justify-content: center;

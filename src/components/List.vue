@@ -1,7 +1,9 @@
 <template>
   <div>
     <div v-for="order in displayOrders" :key='order.id'>
-        <Card :order='order' :handleOpenModal='handleOpenModal' />
+        <Card :order='order' 
+              :firstOrderId='displayOrders.length === 0 ? 0 : displayOrders[0].id' 
+              :handleOpenModal='handleOpenModal' />
     </div>
   </div>
 </template>
