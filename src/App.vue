@@ -123,13 +123,14 @@ export default {
 <style>
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 
 .app {
     width: 50%;
     position: absolute;
     left: 50%;
     transform: translate(-50%, 0);
-    margin: 50px 0;
+    margin: 30px 0;
 }
 
 .list {

@@ -44,7 +44,6 @@ export default {
 
 .grid-item div {
   display: flex;
-  color: #285e75;
   font-size: 1.2rem;
   align-items: center;
   height: 100%;
@@ -53,6 +52,9 @@ export default {
 .name {
   grid-area: name;
   padding: 5px 0 5px 10px;
+  div {
+      color: #285e75;
+  }
 }
 
 .price {
@@ -60,13 +62,16 @@ export default {
   padding: 5px 10px 5px 0;
   div {
       justify-content: flex-end;
-      color: #285e75;
+      color: #4185a1;
   }
 }
 
 .notes {
   grid-area: notes;
   padding: 0 0 5px 10px;
+  div {
+      color: #478caa;
+  }
 }
 .edit {
     background-color: #ebce7e;
