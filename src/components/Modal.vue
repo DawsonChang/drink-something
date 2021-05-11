@@ -7,26 +7,64 @@
         <div class="modal-content">
             <div class="modal-header">
                 <span class="close" @click='handleCloseModal'>&times;</span>
-                <h2>{{ modalMode }}</h2>
+                <h3>{{ modalMode }}</h3>
             </div>
             <!-- ADD mode -->
             <div class="modal-body" v-if='modalMode=="add"'>
-                <input v-model="newOrderObject.name" placeholder="name">
-                <input v-model="newOrderObject.price" placeholder="price" type='number'>
-                <textarea v-model="newOrderObject.notes" placeholder="notes"></textarea>
-                <button @click='addOrder(newOrderObject)' >Yes</button>
+                <div class="input">
+                    <div style="padding-right: 5px">Name: </div>
+                    <div>
+                        <input v-model="newOrderObject.name" placeholder="name">
+                    </div>
+                </div>
+                <div class="input">
+                    <div style="padding-right: 10px">Price: </div>
+                    <div>
+                        <input v-model="newOrderObject.price" placeholder="price" type='number'>
+                    </div>
+                </div>
+                <div class="input">
+                    <div style="padding-right: 10px">Notes: </div>
+                    <div>
+                        <textarea v-model="newOrderObject.notes" placeholder="notes"></textarea>
+                    </div>
+                </div>
+                <div class='btn'>
+                    <button @click='addOrder(newOrderObject)' >OK</button>
+                </div>
             </div>
             <!-- EDIT mode -->
             <div class="modal-body" v-else-if='modalMode=="edit"'>
-                <input v-model="newOrderObject.name" placeholder="name">
-                <input v-model="newOrderObject.price" placeholder="price" type='number'>
-                <textarea v-model="newOrderObject.notes" placeholder="notes"></textarea>
-                <button @click='editOrder(newOrderObject)'>Yes</button>
+                <div class="input">
+                    <div style="padding-right: 5px">Name: </div>
+                    <div>
+                        <input v-model="newOrderObject.name" placeholder="name">
+                    </div>
+                </div>
+                <div class="input">
+                    <div style="padding-right: 10px">Price: </div>
+                    <div>
+                        <input v-model="newOrderObject.price" placeholder="price" type='number'>
+                    </div>
+                </div>
+                <div class="input">
+                    <div style="padding-right: 10px">Notes: </div>
+                    <div>
+                        <textarea v-model="newOrderObject.notes" placeholder="notes"></textarea>
+                    </div>
+                </div>
+                <div class='btn'>
+                    <button @click='editOrder(newOrderObject)' >OK</button>
+                </div>
             </div>
             <!-- Delete mode -->
             <div class="modal-body" v-else-if='modalMode=="delete"'>
-                <p>Are you sure to delete this order?</p>
-                <button @click='deleteOrder(newOrderObject)'>Yes</button>
+                <div style="text-align: center; padding-top: 10px;">
+                    <p>Are you sure to delete this order?</p>
+                </div>
+                <div class='btn'>
+                    <button @click='deleteOrder(newOrderObject)'>Yes</button>
+                </div>
             </div>
         </div>
     </div>
@@ -127,13 +165,24 @@ export default {
 }
 
 .modal-header {
-  padding: 2px 16px;
+  padding: 1px 16px;
   background-color: #5cb85c;
   color: white;
 }
 
 .modal-body {
     padding: 2px 16px;
+}
+
+.input {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.btn {
+    text-align: center;
+    padding: 15px 0;
 }
 
 </style>
