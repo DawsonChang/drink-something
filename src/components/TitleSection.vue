@@ -1,6 +1,9 @@
 <template>
   <div>
     <h1>Drink Something</h1>
+    <div><font-awesome-icon :icon="['fas', 'plus']" /></div>
+    <div><font-awesome-icon :icon="['fas', 'pencil-alt']" /></div>
+    <div><font-awesome-icon :icon="['fas', 'trash-alt']" /></div>
     <select v-model="selected">
       <option disabled value="">Please select sorting method</option>
       <option>Original</option>
@@ -9,7 +12,6 @@
       <option>By price (ascending)</option>
       <option>By price (descending)</option>
     </select>
-    <span>Selected: {{ selected }}</span>
   </div>
   
 </template>
