@@ -6,7 +6,7 @@
         <font-awesome-icon :icon="['fas', 'plus']" />
       </div>
       <div>
-        <select v-model="selected" @click='sortOrder(selected)'>
+        <select v-model="selected">
           <option disabled value="">Please select sorting method</option>
           <option>Original</option>
           <option>By name (ascending)</option>

@@ -66,15 +66,14 @@ export default {
             this.displayOrders = _.cloneDeep(this.orders)
             this.handleCloseModal()
         },
-        // TODO: 檢查 editOrder 是否正常運作
         editOrder(updateOrder) {
             const curId = updateOrder.id
-            this.orders.filter(obj => {
-                if (obj.id === curId) {
-                    const { name, price, notes } = updateOrder
-                    obj = {...obj, name, price, notes}
-                }
-            })
+            // 尋找欲編輯的id，如果找到就回傳 updateOrder，否則就是原本的 obj
+            this.orders = this.orders.map(obj => 
+                obj.id === curId ? {...updateOrder} : obj
+            )
+            this.displayOrders = _.cloneDeep(this.orders)
+            this.handleCloseModal()
         },
         deleteOrder(deleteOrder) {
             const curId = deleteOrder.id
