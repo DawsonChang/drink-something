@@ -10,13 +10,13 @@
             :editOrder='editOrder'
             :deleteOrder='deleteOrder'>
         </Modal>
-        <div class="app">
+        <div class='app'>
             <TitleSection 
                 :sortOrder='sortOrder'
                 :handleOpenModal='handleOpenModal'
                 >
             </TitleSection>
-            <List 
+            <List class='list'
                 :displayOrders='displayOrders'
                 :handleOpenModal='handleOpenModal'>
             </List>
@@ -122,11 +122,18 @@ export default {
 
 <style>
 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&display=swap');
+
 .app {
+    width: 50%;
     position: absolute;
     left: 50%;
     transform: translate(-50%, 0);
     margin: 50px 0;
+}
+
+.list {
+    margin-top: 30px;
 }
 
 </style>
