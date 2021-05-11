@@ -1,8 +1,14 @@
 <template>
   <div>
     <ul>
-        <li v-for="order in orders" :key="order.id" @click="deleteOrder(order.id)">
+        <li v-for="order in displayOrders" :key='order.id'>
             {{ order.name }} - {{ order.price }} - {{ order.notes }}
+            <div class='pencil-icon' @click='handleOpenModal("edit", order)'>
+                <font-awesome-icon :icon="['fas', 'pencil-alt']" />
+            </div>
+            <div class='trash-icon' @click='handleOpenModal("delete", order)'>
+                <font-awesome-icon :icon="['fas', 'trash-alt']" />
+            </div>
         </li>
     </ul>
   </div>
@@ -12,8 +18,8 @@
 export default {
     name: 'List',
     props: {
-        orders: Array,
-        deleteOrder: Function
+        displayOrders: Array,
+        handleOpenModal: Function
     },
     data() {
         return {}
@@ -22,5 +28,16 @@ export default {
 </script>
 
 <style>
-
+.pencil-icon:hover,
+.pencil-icon:focus {
+  color: red;
+  text-decoration: none;
+  cursor: pointer;
+}
+.trash-icon:hover,
+.trash-icon:focus {
+  color: red;
+  text-decoration: none;
+  cursor: pointer;
+}
 </style>
