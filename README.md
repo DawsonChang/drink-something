@@ -34,7 +34,7 @@ child component。
 ## 部署
 ```
 此 project 部署至 Github Pages:
-[連結](https://dawsonchang.github.io/drink-something/)
+> - [連結](https://dawsonchang.github.io/drink-something/)
 ```
 
 ## Project setup
